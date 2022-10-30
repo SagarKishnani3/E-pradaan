@@ -1,0 +1,36 @@
+
+<section>
+    <div class="container-fluid">
+      <div class="row mb-5">
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+          <div class="row align-items-center">
+            <div class="col-xl-12 col-12 mb-4 mb-xl-0">
+              <h3 class="text-muted text-center mb-3">Robin Hood Army</h3>
+              <table class="table table-striped bg-light text-center">
+                <thead>
+                  <tr class="text-muted">
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Amount</th>
+                    <th>Approval</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ngo of ngos;let looper=index;">
+                    <th>{{looper+1}}</th>
+                    <td>{{ngo.first_name}}</td>
+                    <td>{{ngo.last_name}}</td>
+                    <td>{{ngo.gender}}</td>
+                    <td><button  type="button" class="btn btn-warning    btn-sm">Accept</button>
+                        <button  type="button" class="btn btn-danger btn-sm mx-5">Deny</button></td>
+                  </tr>
+              
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
