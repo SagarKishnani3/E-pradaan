@@ -1,5 +1,40 @@
-
-
+<!-- <div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for Ngo">
+      </div>
+    /*  <table class="table table-striped" >
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>state</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ngFor="let hero of heroes | filter:searchText">
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.state}}</td>
+        </tr>
+        </tbody>
+      </table> */
+      <div *ngFor="let Detail of Details | filter:searchText">
+        <h1>{{Detail.ngo_name}}</h1>
+        <div>
+            <span><h3>District:</h3><span>{{Detail.district}}</span></span>
+            <span><h3>city:</h3><span>{{Detail.city}}</span></span>
+            <span><h3>Location:</h3><span>{{Detail.location}}</span></span>
+            <span><h5>contact-No:</h5><span>{{Detail.contact}}</span></span>
+        </div>
+        <div class="col-lg-4 d-none d-md-block col-md-6 btn-bhed">
+            <button class="btn btn-sm btn-default" routerLink="/ngo" routerLinkActive="current">Donate</button> 
+            {{Detail.id}}
+            <button class="btn btn-sm btn-success" (click)="navigate(Detail)" routerLinkActive="current">show more Details</button>  
+        </div>
+        <span>-------------------------------------------------------------------------------------</span>
+    </div>
+  </div> -->
 <!-- ******************** Slider Starts Here ******************* -->
 <div class="slider">
     <!-- Set up your HTML -->
@@ -175,7 +210,7 @@
         <div class="event-ro row">
             <div class="col-md-4 col-sm-6">
                 <div class="event-box">
-                    <img src="assets/images/events/image_08.jpg" alt="">
+                    <img src="assets/images/events/image_01.jpeg" alt="">
                     <h4>Mid-day meals</h4>
                     
                     <p class="raises"><span>Raised : ₹34,425</span> / ₹5,00,000 </p>
@@ -194,7 +229,7 @@
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="event-box">
-                    <img src="assets/images/events/image_04.jpg" alt="">
+                    <img src="assets/images/events/image_02.jpg" alt="">
                     <h4>Raisement of Fund for Betterment of Society</h4>
                     <p class="raises"><span>Raised : ₹3,54,425</span> / ₹10,00,000 </p>
                     <p class="desic">The fund has been raised through Fundraiser for betterment of the society at a wider pace</p>
@@ -307,7 +342,7 @@ But you can read the following facts in order to make sure of all pluses of our 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog">
                         <figure>
-                            <img src="assets/images/events/image_01.jpeg" alt="">
+                            <img src="assets/images/events/image_12.jpg" alt="">
                         </figure>
                         <div class="blog-detail">
                             <small>By Admin | August 10 2022</small>
@@ -324,7 +359,7 @@ But you can read the following facts in order to make sure of all pluses of our 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog">
                         <figure>
-                            <img src="assets/images/events/image_02.jpg" alt="">
+                            <img src="assets/images/events/image_10.jpg" alt="">
                         </figure>
                         <div class="blog-detail">
                             <small>By Admin | August 10 2022</small>
@@ -341,7 +376,7 @@ But you can read the following facts in order to make sure of all pluses of our 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog">
                         <figure>
-                            <img src="assets/images/events/image_03.jpg" alt="">
+                            <img src="assets/images/events/image_11.jpg" alt="">
                         </figure>
                         <div class="blog-detail">
                             <small>By Admin | August 10 2022</small>
@@ -416,7 +451,7 @@ But you can read the following facts in order to make sure of all pluses of our 
 </footer>
 <div class="copy">
         <div class="container">
-            <a href="https://www.smarteyeapps.com/">2022 &copy; All Rights Reserved By Our Team</a>
+            <a href="#">2022 &copy; All Rights Reserved By Our Team</a>
             
             <span>
             <a><i class="fa fa-github-square" aria-hidden="true"></i></a>

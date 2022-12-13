@@ -11,12 +11,18 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgoComponent } from './ngo/ngo.component';
 import { NgoDataComponent } from './ngo-data/ngo-data.component';
 import { FundRaiserDataComponent } from './fund-raiser-data/fund-raiser-data.component';
 import { FundRaiserComponent } from './fund-raiser/fund-raiser.component';
-
+import { DonorFormComponent } from './donor-form/donor-form.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ShowMoreDetailsComponent } from './show-more-details/show-more-details.component';
+import { SearchComponent } from './search/search.component';
+import { GooglePayButtonModule } from '@google-pay/button-angular';
+import { SearchService } from './search.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,13 +38,21 @@ import { FundRaiserComponent } from './fund-raiser/fund-raiser.component';
     NgoDataComponent,
     FundRaiserDataComponent,
     FundRaiserComponent,
+    DonorFormComponent,
+    ShowMoreDetailsComponent,
+    SearchComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    ReactiveFormsModule  
+    ReactiveFormsModule ,
+     FormsModule,
+     Ng2SearchPipeModule,
+     GooglePayButtonModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

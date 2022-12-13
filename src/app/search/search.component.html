@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  search for Ngo">
+      </div>
+      <!-- <table class="table table-striped" >
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>state</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ngFor="let hero of heroes | filter:searchText">
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.state}}</td>
+        </tr>
+        </tbody>
+      </table> -->
+      <div *ngFor="let Detail of Details | filter:searchText">
+        <h1>{{Detail.ngo_name}}</h1>
+        <div>
+            <span><h3>District:</h3><span>{{Detail.district}}</span></span>
+            <span><h3>city:</h3><span>{{Detail.city}}</span></span>
+            <span><h3>Location:</h3><span>{{Detail.location}}</span></span>
+            <span><h5>contact-No:</h5><span>{{Detail.contact}}</span></span>
+        </div>
+        <div class="col-lg-4 d-none d-md-block col-md-6 btn-bhed">
+            <button class="btn btn-sm btn-default" routerLink="/ngo" routerLinkActive="current">Donate</button> 
+            {{Detail.id}}
+            <button class="btn btn-sm btn-success" (click)="navigate(Detail)" routerLinkActive="current">show more Details</button>  
+        </div>
+        <span>-------------------------------------------------------------------------------------</span>
+    </div>
+  </div>

@@ -10,11 +10,17 @@ import { NgoComponent } from './ngo/ngo.component';
 import { NgoDataComponent } from './ngo-data/ngo-data.component';
 import { FundRaiserComponent } from './fund-raiser/fund-raiser.component';
 import { FundRaiserDataComponent } from './fund-raiser-data/fund-raiser-data.component';
+import { DonorFormComponent } from './donor-form/donor-form.component';
+import { ShowMoreDetailsComponent } from './show-more-details/show-more-details.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes:Routes=[
   {
     path:"home",component:HomeComponent
+  },
+  {
+    path:"search",component:SearchComponent
   },
   {
     path:"aboutus",component:AboutusComponent
@@ -42,6 +48,12 @@ const routes:Routes=[
   },
   {
     path:"fund-raiser-data",component:FundRaiserDataComponent
+  },
+  {
+    path:"donor-form",component:DonorFormComponent
+  },
+  {
+    path:"show-details/:id",component:ShowMoreDetailsComponent
   }
 ]
 @NgModule({
